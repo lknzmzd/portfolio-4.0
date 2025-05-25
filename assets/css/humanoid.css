@@ -1,0 +1,615 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 800px;
+  height: 672px;
+  position: relative;
+  --animation: 1.4s ease infinite;
+}
+
+.frame *,
+.frame *::before,
+.frame *::after {
+  position: absolute;
+  content: "";
+}
+
+.floor {
+  top: auto;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #edfafd;
+}
+
+.humanoid {
+  top: 132px;
+  left: 443px;
+  width: 131px;
+  height: 214px;
+  transform-origin: bottom center;
+  transform: rotate(10deg);
+  animation: humanoid var(--animation);
+}
+
+.humanoid::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right bottom, #c4f1f5, #a1c0c3);
+  border-radius: 60px 79px 68px 70px / 35px 90px 134px 163px;
+}
+
+.humanoid__shoulder_left {
+  top: 27px;
+  left: 19px;
+  width: 12px;
+  height: 135px;
+  background: #6f7173;
+  border-radius: 99em;
+  transform-origin: top center;
+  transform: rotate(50deg);
+  animation: humanoidShoulderLeft var(--animation);
+}
+
+.humanoid__shoulder_left::before {
+  top: 27px;
+  left: -16px;
+  width: 42px;
+  height: 84px;
+  border-radius: 10px 37px 36px 18px;
+  background: linear-gradient(to left bottom, #dbf4fc, #becee3);
+}
+
+.humanoid__shoulder_left::after {
+  top: -18px;
+  left: -13px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform-origin: 20px 20px;
+  background: radial-gradient(#ebf4fb 43%, #626465 43%, #626465 53%, transparent 0%), radial-gradient(#ebf4fb 70%, transparent 0%);
+}
+
+.humanoid__arm_left {
+  top: 124px;
+  left: 0px;
+  width: 12px;
+  height: 124px;
+  background: #6f7173;
+  border-radius: 99em;
+  transform-origin: 6px 6px;
+  transform: rotate(-107deg);
+  animation: humanoidArmLeft var(--animation);
+}
+
+.humanoid__arm_left::before {
+  top: 24px;
+  left: -11px;
+  width: 36px;
+  height: 79px;
+  border-radius: 10px 22px 27px 11px;
+  background: radial-gradient(circle at 27% 81%, #fff 6%, transparent 0%), radial-gradient(circle at 28% 67%, #fff 5%, transparent 0%), linear-gradient(to left top, #dbf4fc, #becee3);
+}
+
+.humanoid__arm_left::after {
+  top: -6px;
+  left: -6px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transform-origin: 20px 20px;
+  background: radial-gradient(#ebf4fb 42%, #626465 42%, #626465 53%, transparent 0%), radial-gradient(#ebf4fb 100%, transparent 0%);
+}
+
+.humanoid__wrist_left {
+  top: 107px;
+  left: -11px;
+  width: 36px;
+  height: 35px;
+  clip-path: polygon(60% 0, 71% -4%, 93% 24%, 103% 57%, 84% 93%, 55% 102%, 20% 96%, 2% 78%, 9% 21%, 21% 11%);
+  background: linear-gradient(to left top, #c0e9fa, #b7dde7);
+}
+
+.humanoid__shoulder_right {
+  top: 27px;
+  left: 19px;
+  width: 12px;
+  height: 135px;
+  background: #6f7173;
+  border-radius: 99em;
+  transform-origin: top center;
+  transform: rotate(-59deg);
+  z-index: -1;
+  animation: humanoidShoulderRight var(--animation);
+}
+
+.humanoid__shoulder_right::before {
+  top: 27px;
+  left: -16px;
+  width: 42px;
+  height: 84px;
+  border-radius: 10px 37px 36px 18px;
+  background: linear-gradient(to left bottom, #dbf4fc, #becee3);
+}
+
+.humanoid__shoulder_right::after {
+  top: -18px;
+  left: -13px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform-origin: 20px 20px;
+  background: radial-gradient(#ebf4fb 43%, #626465 43%, #626465 53%, transparent 0%), radial-gradient(#ebf4fb 70%, transparent 0%);
+}
+
+.humanoid__arm_right {
+  top: 124px;
+  left: 0px;
+  width: 12px;
+  height: 124px;
+  background: #6f7173;
+  border-radius: 99em;
+  transform-origin: 6px 6px;
+  transform: rotate(-109deg);
+  animation: humanoidArmRight var(--animation);
+}
+
+.humanoid__arm_right::before {
+  top: 24px;
+  left: -11px;
+  width: 36px;
+  height: 79px;
+  border-radius: 10px 22px 27px 11px;
+  background: linear-gradient(to left top, #dbf4fc, #becee3);
+}
+
+.humanoid__arm_right::after {
+  top: -6px;
+  left: -6px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transform-origin: 20px 20px;
+  background: radial-gradient(#ebf4fb 42%, #626465 42%, #626465 53%, transparent 0%), radial-gradient(#ebf4fb 100%, transparent 0%);
+}
+
+.humanoid__wrist_right {
+  top: 107px;
+  left: -11px;
+  width: 36px;
+  height: 35px;
+  clip-path: polygon(60% 0, 71% -4%, 93% 24%, 103% 57%, 84% 93%, 55% 102%, 20% 96%, 2% 78%, 9% 21%, 21% 11%);
+  background: linear-gradient(to left top, #c0e9fa, #b7dde7);
+}
+
+.humanoid__leg_left {
+  top: 179px;
+  left: 54px;
+  width: 20px;
+  height: 210px;
+  background: #5f6061;
+  border-radius: 99em;
+  transform-origin: 10px 10px;
+  transform: rotate(33deg);
+  z-index: -2;
+  animation: humanoidLegLeft var(--animation);
+}
+
+.humanoid__leg_left::before {
+  top: 47px;
+  left: -26px;
+  width: 68px;
+  height: 128px;
+  border-radius: 21px 33px 12px 25px / 15px 31px 12px 53px;
+  transform: rotate(2deg);
+  background: linear-gradient(to bottom left, #bde6f4, #a2c1c4);
+}
+
+.humanoid__leg_left::after {
+  top: 183px;
+  left: -7px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  transform-origin: 20px 20px;
+  background: radial-gradient(#ebf4fb 37%, #626465 37%, #626465 47%, transparent 0%), radial-gradient(#ebf4fb 100%, transparent 0%);
+}
+
+.humanoid__shin_left {
+  top: 191px;
+  left: 0;
+  width: 18px;
+  height: 189px;
+  background: #5f6061;
+  border-radius: 99em;
+  transform-origin: 10px 10px;
+  transform: rotate(38deg);
+  animation: humanoidShinLeft var(--animation);
+}
+
+.humanoid__shin_left::before {
+  top: 33px;
+  left: -13px;
+  width: 51px;
+  height: 122px;
+  border-radius: 27px 17px 27px 29px / 27px 27px 129px;
+  background: radial-gradient(9% 111%, #fff 15%, transparent 0%), linear-gradient(to left top, #a3c2c5, #bfe7f5);
+}
+
+.humanoid__foot_left {
+  top: 173px;
+  left: -1px;
+  width: 61px;
+  height: 24px;
+  border-radius: 49% 59% 32% 44%;
+  background: radial-gradient(circle at 11% 56%, #fff 6%, transparent 0%), radial-gradient(circle at 84% 58%, #fff 15%, transparent 0%), linear-gradient(to left top, #dbf4fc, #becee3);
+  transform-origin: left center;
+  transform: rotate(-4deg);
+  animation: humanoidFootLeft var(--animation);
+}
+
+.humanoid__foot_left::after {
+  top: 3px;
+  left: 41px;
+  width: 40px;
+  height: 21px;
+  border-radius: 35% 100% 35% 24% / 62% 95% 13% 75%;
+  background: radial-gradient(circle at 34% 51%, #fff 38%, transparent 0%), linear-gradient(to left top, #c6d8ea, #d4ebf6);
+  transform-origin: 10px 10px;
+  transform: rotate(0deg );
+  animation: humanoidToeLeft var(--animation);
+}
+
+.humanoid__leg_right {
+  top: 179px;
+  left: 54px;
+  width: 20px;
+  height: 210px;
+  background: #5f6061;
+  border-radius: 99em;
+  transform-origin: 10px 10px;
+  transform: rotate(-78deg);
+  z-index: -1;
+  animation: humanoidLegRight var(--animation);
+}
+
+.humanoid__leg_right::before {
+  top: 47px;
+  left: -26px;
+  width: 68px;
+  height: 128px;
+  border-radius: 21px 33px 12px 25px / 15px 31px 12px 53px;
+  transform: rotate(2deg);
+  background: radial-gradient(farthest-side at 58% 80%, #fff 6%, transparent 0%), radial-gradient(closest-side at 75% 79%, #fff 18%, transparent 0%), radial-gradient(closest-side at 75% 63%, #fff 18%, transparent 0%), linear-gradient(to bottom left, #bde6f4, #a2c1c4);
+}
+
+.humanoid__leg_right::after {
+  top: 183px;
+  left: -7px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  transform-origin: 20px 20px;
+  background: radial-gradient(#ebf4fb 37%, #626465 37%, #626465 47%, transparent 0%), radial-gradient(#ebf4fb 100%, transparent 0%);
+}
+
+.humanoid__shin_right {
+  top: 191px;
+  left: 0;
+  width: 18px;
+  height: 189px;
+  background: #5f6061;
+  border-radius: 99em;
+  transform-origin: 10px 10px;
+  transform: rotate(39deg);
+  animation: humanoidShinRight var(--animation);
+}
+
+.humanoid__shin_right::before {
+  top: 33px;
+  left: -13px;
+  width: 51px;
+  height: 122px;
+  border-radius: 27px 17px 27px 29px / 27px 27px 129px;
+  background: radial-gradient(circle at 67% 14%, #fff 6%, transparent 0%), radial-gradient(circle at 65% 30%, #fff 5%, transparent 0%), linear-gradient(to left top, #a3c2c5, #bfe7f5);
+}
+
+.humanoid__foot_right {
+  top: 174px;
+  left: -1px;
+  width: 61px;
+  height: 24px;
+  border-radius: 49% 59% 32% 44%;
+  background: radial-gradient(circle at 11% 56%, #fff 6%, transparent 0%), radial-gradient(circle at 84% 58%, #fff 15%, transparent 0%), linear-gradient(to left top, #dbf4fc, #becee3);
+  transform-origin: left center;
+  transform: rotate(-4deg);
+  animation: humanoidFootRight var(--animation);
+}
+
+.humanoid__foot_right::after {
+  top: 3px;
+  left: 41px;
+  width: 40px;
+  height: 21px;
+  border-radius: 35% 100% 35% 24% / 62% 95% 13% 75%;
+  background: radial-gradient(circle at 34% 51%, #fff 38%, transparent 0%), linear-gradient(to left top, #c6d8ea, #d4ebf6);
+  transform-origin: 10px 10px;
+  transform: rotate(0deg );
+  animation: humanoidToeRight var(--animation);
+}
+
+.humanoid__head {
+  top: -81px;
+  left: 14px;
+  width: 90px;
+  height: 125px;
+  transform-origin: bottom left;
+  transform: rotate(6deg );
+  animation: humanoidHead var(--animation);
+}
+
+.humanoid__head::before {
+  top: 56px;
+  left: 14px;
+  width: 58px;
+  height: 67px;
+  background: #696b6d;
+  clip-path: polygon(14% 0, 75% 7%, 70% 40%, 74% 67%, 88% 94%, 62% 82%, 35% 64%, 15% 50%, 17% 48%, 20% 23%);
+  transform-origin: bottom left;
+  transform: rotate(-3deg);
+  z-index: 1;
+}
+
+.humanoid__helmet {
+  top: 3px;
+  left: 2px;
+  width: 78px;
+  height: 64px;
+  background: linear-gradient(to bottom right, #bed8e5, #c2dbe9);
+  border-radius: 50% 50% 45% 50% / 60% 63% 40% 40%;
+  transform-origin: center;
+  transform: rotate(7deg);
+  z-index: 1;
+  animation: humanoidHelmet var(--animation);
+}
+
+.humanoid__helmet::before {
+  top: 30px;
+  left: 43px;
+  width: 47px;
+  height: 39px;
+  background: linear-gradient(to bottom right, #bed8e5, #c2dbe9);
+  border-radius: 3px 9px 23px 18px;
+  transform: rotate(64deg);
+}
+
+.humanoid__visor {
+  top: 15px;
+  left: 20px;
+  width: 39px;
+  height: 39px;
+}
+
+.humanoid__visor::before {
+  top: -9px;
+  left: 34.56px;
+  width: 13px;
+  height: 20px;
+  background: #eb8e99;
+  border-radius: 5px 0px 0px 0px;
+  transform-origin: bottom left;
+  transform: rotate(73deg);
+  z-index: 1;
+  animation: humanoidVisorSight var(--animation);
+}
+
+.humanoid__visor::after {
+  top: 0px;
+  left: 0px;
+  width: 39px;
+  height: 39px;
+  background: radial-gradient(circle at 50% 50%, #f8e2e5 21%, transparent 0%), radial-gradient(circle at 50% 50%, #faeced 40%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa);
+  border-radius: 50%;
+  z-index: 1;
+  animation: humanoidVisorCircle var(--animation);
+}
+
+@keyframes humanoid {
+  0%, 100% {transform: translate(0px, 11px) rotate(10deg)}
+  10% {transform: translate(0px, 0px) rotate(9deg)}
+  20% {transform: translate(0px, 0px) rotate(10deg)}
+  30% {transform: translate(-2px, 11px) rotate(13deg)}
+  40% {transform: translate(-11px, 64px) rotate(18deg)}
+  50% {transform: translate(-9px, 22px) rotate(16deg)}
+  60% {transform: translate(0px, 4px) rotate(11deg)}
+  70% {transform: translate(1px, 0px) rotate(9deg)}
+  80% {transform: translate(-9px, 9px) rotate(14deg)}
+  90% {transform: translate(-6px, 60px) rotate(14deg)}
+}
+
+@keyframes humanoidHead {
+  0%, 100% {transform: rotate(6deg)}
+  10% {transform: rotate(3deg)}
+  20% {transform: rotate(0deg)}
+  30%, 80% {transform: rotate(7deg)}
+  40%, 90% {transform: rotate(10deg)}
+  50% {transform: rotate(8deg)}
+  60% {transform: rotate(3deg)}
+  70% {transform: rotate(1deg)}
+}
+
+@keyframes humanoidHelmet {
+  0%, 100% {transform: rotate(14deg)}
+  10% {transform: rotate(13deg)}
+  20% {transform: rotate(12deg)}
+  30% {transform: rotate(14deg)}
+  40% {transform: rotate(17deg)}
+  50% {transform: rotate(19deg)}
+  60% {transform: rotate(16deg)}
+  70% {transform: rotate(12deg)}
+  80% {transform: rotate(8deg)}
+  90% {transform: rotate(5deg)}
+}
+
+@keyframes humanoidVisorSight {
+  0%, 100% {transform: rotate(73deg); background: #f3cfd3}
+  10% {transform: rotate(73deg); background: #f2c9ce}
+  20% {transform: rotate(73deg); background: #f6d8dc}
+  30%, 80% {transform: rotate(73deg); background: #fff}
+  40%, 90% {transform: rotate(73deg); background: #faeced}
+  50% {transform: rotate(73deg); background: #efbbc1}
+  60%, 70% {transform: rotate(73deg); background: #ed9da6}
+}
+
+@keyframes humanoidVisorCircle {
+  0%, 100% {background: radial-gradient(circle at 50% 50%, #f3cfd3 40%, transparent 0%), radial-gradient(circle at 50% 50%, #f6dcdf 60%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa)}
+  10% {background: radial-gradient(circle at 50% 50%, #f2c9ce 35%, transparent 0%), radial-gradient(circle at 50% 50%, #faeced 60%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa)}
+  20% {background: radial-gradient(circle at 50% 50%, #f8e2e5 33%, transparent 0%), radial-gradient(circle at 50% 50%, #faeced 60%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa)}
+  30%, 80% {background: radial-gradient(circle at 50% 50%, #f8e2e5 2%, transparent 0%), radial-gradient(circle at 50% 50%, #faf1f2 60%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa)}
+  40%, 90% {background: radial-gradient(circle at 50% 50%, #f8e2e5 2%, transparent 0%), radial-gradient(circle at 50% 50%, #faf1f2 60%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa)}
+  50% {background: radial-gradient(circle at 50% 50%, #f8e2e5 5%, transparent 0%), radial-gradient(circle at 50% 50%, #faeced 40%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa)}
+  60%, 70% {background: radial-gradient(circle at 50% 50%, #f8e2e5 21%, transparent 0%), radial-gradient(circle at 50% 50%, #faeced 40%, transparent 0%), linear-gradient(to left top, #fcf7f8, #fcf8fa)}
+}
+
+@keyframes humanoidShoulderLeft {
+  0%, 100% {transform: rotate(7deg)}
+  10% {transform: rotate(-37deg)}
+  20% {transform: rotate(-57deg)}
+  30% {transform: rotate(-59deg)}
+  40% {transform: rotate(-20deg)}
+  50% {transform: rotate(18deg)}
+  60% {transform: rotate(34deg)}
+  70% {transform: rotate(46deg)}
+  80% {transform: rotate(49deg)}
+  90% {transform: rotate(36deg)}
+}
+
+@keyframes humanoidArmLeft {
+  0%, 100% {transform: rotate(-94deg)}
+  10% {transform: rotate(-103deg)}
+  20% {transform: rotate(-108deg)}
+  30% {transform: rotate(-101deg)}
+  40%, 90% {transform: rotate(-90deg)}
+  50% {transform: rotate(-93deg)}
+  60% {transform: rotate(-99deg)}
+  70% {transform: rotate(-107deg)}
+  80% {transform: rotate(-102deg)}
+}
+
+@keyframes humanoidShoulderRight {
+  0%, 100% {transform: rotate(25deg)}
+  10% {transform: rotate(43deg)}
+  20% {transform: rotate(48deg)}
+  30% {transform: rotate(50deg)}
+  40% {transform: rotate(27deg)}
+  50% {transform: rotate(-3deg)}
+  60% {transform: rotate(-23deg)}
+  70% {transform: rotate(-52deg)}
+  80% {transform: rotate(-59deg)}
+  90% {transform: rotate(-5deg)}
+}
+
+@keyframes humanoidArmRight {
+  0%, 100% {transform: rotate(-92deg)}
+  10% {transform: rotate(-105deg)}
+  20% {transform: rotate(-107deg)}
+  30% {transform: rotate(-103deg)}
+  40% {transform: rotate(-90deg)}
+  50% {transform: rotate(-95deg)}
+  60% {transform: rotate(-101deg)}
+  70% {transform: rotate(-105deg)}
+  80% {transform: rotate(-108deg)}
+  90% {transform: rotate(-88deg)}
+}
+
+@keyframes humanoidLegLeft {
+  0%, 100% {transform: rotate(-11deg)}
+  10% {transform: rotate(-78deg)}
+  20% {transform: rotate(-80deg)}
+  30% {transform: rotate(-55deg)}
+  40% {transform: rotate(-74deg)}
+  50% {transform: rotate(-42deg)}
+  60% {transform: rotate(-19deg)}
+  70% {transform: rotate(34deg)}
+  80% {transform: rotate(24deg)}
+  90% {transform: rotate(27deg)}
+}
+
+@keyframes humanoidShinLeft {
+  0%, 100% {transform: rotate(127deg)}
+  10% {transform: rotate(86deg)}
+  20% {transform: rotate(46deg)}
+  30% {transform: rotate(-1deg)}
+  40% {transform: rotate(60deg)}
+  50% {transform: rotate(57deg)}
+  60% {transform: rotate(51deg)}
+  70% {transform: rotate(2deg)}
+  80% {transform: rotate(69deg)}
+  90% {transform: rotate(100deg)}
+}
+
+@keyframes humanoidFootLeft {
+  0%, 100% {transform: rotate(14deg)}
+  10%, 80% {transform: rotate(5deg)}
+  20% {transform: rotate(-20deg)}
+  30% {transform: rotate(24deg)}
+  40% {transform: rotate(-6deg)}
+  50% {transform: rotate(-32deg)}
+  60% {transform: rotate(-20deg)}
+  70% {transform: rotate(-4deg)}
+  90% {transform: rotate(4deg)}
+}
+
+@keyframes humanoidToeLeft {
+  0%, 10%, 20%, 30%, 40%, 50%, 70%, 80%, 90%, 100% {transform: rotate(0deg)}
+  60% {transform: rotate(-18deg)}
+}
+
+@keyframes humanoidLegRight {
+  0%, 100% {transform: rotate(-23deg)}
+  10% {transform: rotate(11deg)}
+  20% {transform: rotate(37deg)}
+  30% {transform: rotate(26deg)}
+  40% {transform: rotate(24deg)}
+  50% {transform: rotate(3deg)}
+  60% {transform: rotate(-50deg)}
+  70% {transform: rotate(-81deg)}
+  80% {transform: rotate(-56deg)}
+  90% {transform: rotate(-65deg)}
+}
+
+@keyframes humanoidShinRight {
+  0%, 100% {transform: rotate(47deg)}
+  10% {transform: rotate(22deg)}
+  20% {transform: rotate(15deg)}
+  30% {transform: rotate(69deg)}
+  40% {transform: rotate(98deg)}
+  50% {transform: rotate(119deg)}
+  60% {transform: rotate(129deg)}
+  70% {transform: rotate(62deg)}
+  80% {transform: rotate(0deg)}
+  90% {transform: rotate(72deg)}
+}
+
+@keyframes humanoidFootRight {
+  0%, 100% {transform: rotate(-34deg)}
+  10% {transform: rotate(0deg)}
+  20% {transform: rotate(-4deg)}
+  30% {transform: rotate(8deg)}
+  40% {transform: rotate(5deg)}
+  50%, 60% {transform: rotate(10deg)}
+  70% {transform: rotate(-4deg)}
+  80% {transform: rotate(21deg)}
+  90% {transform: rotate(-23deg)}
+}
+
+@keyframes humanoidToeRight {
+  0%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {transform: rotate(0deg)}
+  10% {transform: rotate(-40deg)}
+}
