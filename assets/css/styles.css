@@ -218,6 +218,16 @@ img{
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
+
+        .about__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .frame, .about__data {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 .nav__list{
