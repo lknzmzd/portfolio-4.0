@@ -1769,30 +1769,26 @@ img{
     .about__container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        max-width: 1200px; /* Optional max width */
-        margin: 0 auto;
-        padding: 2rem;
-        box-sizing: border-box;
+        justify-content: center;
+        gap: 2rem; /* Adds spacing between the two sections */
+        flex-wrap: wrap;
     }
 
     .frame {
-        flex: 1;
-        max-width: 50%;
+        flex: 1 1 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: 600px;
     }
 
     .about__data {
-        flex: 1;
-        max-width: 50%;
-        padding-left: 2rem;
-        box-sizing: border-box;
+        flex: 1 1 50%;
+        max-width: 600px;
         text-align: left;
     }
+
 
     .about__img{
         width: 350px;
