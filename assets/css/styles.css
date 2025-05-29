@@ -318,8 +318,10 @@ img{
   left: 343px;
   width: 131px;
   height: 214px;
-  transform-origin: bottom center;
+  max-width: 100%;
+  transform-origin: center;
   transform: rotate(10deg);
+  transform: scale(0.7);
   animation: humanoid var(--animation);
 }
 
@@ -1778,7 +1780,7 @@ img{
 
     .about__container {
         display: flex;
-        flex-direction: row;
+        /*flex-direction: row;*/
         align-items: center;
         justify-content: center;
         gap: 2rem; /* Adds spacing between the two sections */
@@ -1790,12 +1792,15 @@ img{
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 600px;
+        max-width: 100px;
+        height: auto;
+        transform: scale(0.8); /* Rescale to fit better */
     }
 
     .about__data {
         flex: 1 1 50%;
         max-width: 600px;
+        padding: 1rem;
         text-align: left;
     }
 
